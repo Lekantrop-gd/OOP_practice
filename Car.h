@@ -19,5 +19,7 @@ public:
 	Car(const Car &car);
 	~Car();
 	void input();
+	void output();
 	friend istream& operator >> (istream& in, Car& car);
+	friend ostream& operator << (ostream& out, Car& car);
 };
