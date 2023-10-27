@@ -33,3 +33,20 @@ Car::Car(const Car& car)
 Car::~Car()
 {
 }
+
+void Car::input()
+{
+	cout << "Input car id: "; cin >> this->id;
+	cout << "Input car model: "; cin >> this->model;
+	cout << "Input car price: "; cin >> this->price;
+	cout << "Input car registration number: "; cin >> this->registrationNumber;
+	cout << "Input car vin code: "; cin >> this->vinCode;
+	cout << "Input car number of seats: "; cin >> this->numberOfSeats;
+	cout << "Input car number of doors: "; cin >> this->numberOfDoors;
+}
+
+istream& operator>>(istream& in, Car& car)
+{
+	car.input();
+	return in;
+}

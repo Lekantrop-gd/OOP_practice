@@ -18,4 +18,6 @@ public:
 	Car(int id, const string& model, int price, const string& registrationNumber, const string& vinCode, int numberOfSeats, int numberOfDoors);
 	Car(const Car &car);
 	~Car();
+	void input();
+	friend istream& operator >> (istream& in, Car& car);
 };
