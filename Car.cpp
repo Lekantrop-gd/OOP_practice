@@ -67,3 +67,14 @@ ostream& operator<<(ostream& out, Car& car)
 	car.output();
 	return out;
 }
+
+bool Car::operator==(const Car& other) const
+{
+	return id == other.id &&
+		model == other.model &&
+		price == other.price &&
+		registrationNumber == other.registrationNumber &&
+		vinCode == other.vinCode &&
+		numberOfSeats == other.numberOfSeats &&
+		numberOfDoors == other.numberOfDoors;
+}

@@ -22,4 +22,5 @@ public:
 	void output();
 	friend istream& operator >> (istream& in, Car& car);
 	friend ostream& operator << (ostream& out, Car& car);
+	bool operator==(const Car& other) const;
 };
