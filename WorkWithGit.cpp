@@ -1,12 +1,16 @@
 #include <iostream>
 #include "Car.h"
+#include "Bus.h"
 
 int main()
 {
-    Car object1, object2, object3;
-    std::cin >> object1 >> object2 >> object3;
+    Car car;
+    std::cin >> car;
 
-    std::cout << endl << object1 << endl << object2 << endl << object3;
+    std::cout << endl << car << endl;
 
-    cout << endl << (object1 == object2 ? "Objects are same" : "Objects are different") << endl;
+    Bus bus;
+    std::cin >> bus;
+
+    std::cout << endl << bus << endl;
 }
