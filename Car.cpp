@@ -9,25 +9,13 @@ Car::Car(
 	int numberOfSeats, 
 	int numberOfDoors)
 	: 
-	id(id), 
-	model(model), 
-	price(price), 
-	registrationNumber(registrationNumber), 
-	vinCode(vinCode), 
-	numberOfSeats(numberOfSeats), 
+	Vehicle(id, model, price, registrationNumber, vinCode, numberOfSeats),
 	numberOfDoors(numberOfDoors)
 {
 }
 
-Car::Car(const Car& car)
+Car::Car(const Car& car) : Vehicle(car), numberOfDoors(car.numberOfDoors)
 {
-	this->id = car.id;
-	this->model = car.model;
-	this->price = car.price;
-	this->registrationNumber = car.registrationNumber;
-	this->vinCode = car.vinCode;
-	this->numberOfSeats = car.numberOfSeats;
-	this->numberOfDoors = car.numberOfDoors;
 }
 
 Car::~Car()
@@ -36,24 +24,14 @@ Car::~Car()
 
 void Car::input()
 {
-	cout << "Input car id: "; cin >> this->id;
-	cout << "Input car model: "; cin >> this->model;
-	cout << "Input car price: "; cin >> this->price;
-	cout << "Input car registration number: "; cin >> this->registrationNumber;
-	cout << "Input car vin code: "; cin >> this->vinCode;
-	cout << "Input car number of seats: "; cin >> this->numberOfSeats;
-	cout << "Input car number of doors: "; cin >> this->numberOfDoors;
+	Vehicle::input();
+	cout << "Input number of doors: "; cin >> this->numberOfDoors;
 }
 
 void Car::output()
 {
-	cout << "Car id: " << this->id << endl;
-	cout << "Car model: " << this->model << endl;
-	cout << "Car price: " << this->price << endl;
-	cout << "Car registration number: " << this->registrationNumber << endl;
-	cout << "Car vin code: " << this->vinCode << endl;
-	cout << "Car number of seats: " << this->numberOfSeats << endl;
-	cout << "Car number of doors: " << this->numberOfDoors << endl;
+	Vehicle::output();
+	cout << "Number of doors: " << this->numberOfDoors << endl;
 }
 
 istream& operator>>(istream& in, Car& car)

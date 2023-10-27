@@ -9,25 +9,14 @@ Bus::Bus(
 	int numberOfSeats,
 	bool hasSeatsForDisabledPeople)
 	:
-	id(id),
-	model(model),
-	price(price),
-	registrationNumber(registrationNumber),
-	vinCode(vinCode),
-	numberOfSeats(numberOfSeats),
+	Vehicle(id, model, price, registrationNumber, vinCode, numberOfSeats),
 	hasSeatsForDisabledPeople(hasSeatsForDisabledPeople)
 {
 }
 
-Bus::Bus(const Bus& bus)
+Bus::Bus(const Bus& bus) : Vehicle(bus), hasSeatsForDisabledPeople(bus.hasSeatsForDisabledPeople)
 {
-	this->id = bus.id;
-	this->model = bus.model;
-	this->price = bus.price;
-	this->registrationNumber = bus.registrationNumber;
-	this->vinCode = bus.vinCode;
-	this->numberOfSeats = bus.numberOfSeats;
-	this->hasSeatsForDisabledPeople = bus.hasSeatsForDisabledPeople;
+	
 }
 
 Bus::~Bus()
@@ -36,24 +25,14 @@ Bus::~Bus()
 
 void Bus::input()
 {
-	cout << "Input car id: "; cin >> this->id;
-	cout << "Input car model: "; cin >> this->model;
-	cout << "Input car price: "; cin >> this->price;
-	cout << "Input car registration number: "; cin >> this->registrationNumber;
-	cout << "Input car vin code: "; cin >> this->vinCode;
-	cout << "Input car number of seats: "; cin >> this->numberOfSeats;
+	Vehicle::input();
 	cout << "Input if the bus has seats for disabled people(has - 1, not has - 0): "; cin >> this->hasSeatsForDisabledPeople;
 }
 
 void Bus::output()
 {
-	cout << "Bus id: " << this->id << endl;
-	cout << "Bus model: " << this->model << endl;
-	cout << "Bus price: " << this->price << endl;
-	cout << "Bus registration number: " << this->registrationNumber << endl;
-	cout << "Bus vin code: " << this->vinCode << endl;
-	cout << "Bus number of seats: " << this->numberOfSeats << endl;
-	cout << "Has the bus seats for disabled people: " << this->hasSeatsForDisabledPeople << endl;
+	Vehicle::output();
+	cout << "Has the bus seats for disabled people: " << (this->hasSeatsForDisabledPeople ? "Yes" : "No") << endl;
 }
 
 bool Bus::operator==(const Bus& other) const
