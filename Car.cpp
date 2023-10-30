@@ -1,14 +1,14 @@
 #include "Car.h"
 
 Car::Car(
-	int id, 
-	const string& model, 
-	int price, 
-	const string& registrationNumber, 
-	const string& vinCode, 
-	int numberOfSeats, 
+	int id,
+	const string& model,
+	int price,
+	const string& registrationNumber,
+	const string& vinCode,
+	int numberOfSeats,
 	int numberOfDoors)
-	: 
+	:
 	Vehicle(id, model, price, registrationNumber, vinCode, numberOfSeats),
 	numberOfDoors(numberOfDoors)
 {
@@ -32,6 +32,11 @@ void Car::output()
 {
 	Vehicle::output();
 	cout << "Number of doors: " << this->numberOfDoors << endl;
+}
+
+void Car::beep()
+{
+	cout << "Car beeps!";
 }
 
 istream& operator>>(istream& in, Car& car)

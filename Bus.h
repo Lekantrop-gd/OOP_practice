@@ -15,6 +15,7 @@ public:
 	~Bus();
 	void input() override;
 	void output() override;
+	void beep() override;
 	friend istream& operator >> (istream& in, Bus& bus);
 	friend ostream& operator << (ostream& out, Bus& bus);
 	bool operator==(const Bus& other) const;

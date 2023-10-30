@@ -35,6 +35,11 @@ void Bus::output()
 	cout << "Has the bus seats for disabled people: " << (this->hasSeatsForDisabledPeople ? "Yes" : "No") << endl;
 }
 
+void Bus::beep()
+{
+	cout << "Bus beeps!";
+}
+
 bool Bus::operator==(const Bus& other) const
 {
 	return id == other.id && 

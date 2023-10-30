@@ -18,6 +18,7 @@ public:
 	~Vehicle();
 	virtual void input();
 	virtual void output();
+	virtual void beep() = 0;
 	friend istream& operator >> (istream& in, Vehicle& bus);
 	friend ostream& operator << (ostream& out, Vehicle& bus);
 	virtual bool operator==(const Vehicle& other) const;
