@@ -36,7 +36,7 @@ void Car::output()
 
 void Car::beep()
 {
-	cout << "Car beeps!";
+	cout << "\nCar beeps!";
 }
 
 istream& operator>>(istream& in, Car& car)

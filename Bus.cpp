@@ -37,7 +37,7 @@ void Bus::output()
 
 void Bus::beep()
 {
-	cout << "Bus beeps!";
+	cout << "\nBus beeps!";
 }
 
 bool Bus::operator==(const Bus& other) const
