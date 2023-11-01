@@ -15,7 +15,7 @@ public:
 	Vehicle() = default;
 	Vehicle(int id, const string& model, int price, const string& registrationNumber, const string& vinCode, int numberOfSeats);
 	Vehicle(const Vehicle& bus);
-	~Vehicle();
+	virtual ~Vehicle();
 	virtual void input();
 	virtual void output();
 	virtual void beep() = 0;

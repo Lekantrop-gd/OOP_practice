@@ -2,13 +2,14 @@
 #include "Car.h"
 #include "Bus.h"
 #include "Vehicle.h"
+#include "CustomVector.h"
 
 int main()
 {
-    Vehicle* vehicles[5];
+    Vehicle* vehicles[2];
     int choice;
 
-    for (short x = 0; x < 5; x++) {
+    for (short x = 0; x < 2; x++) {
         cout << "1. Car\n2. Bus\nChoose what the object do you want to create: "; cin >> choice;
 
         if (choice == 1) {
@@ -23,11 +24,25 @@ int main()
         cout << endl;
     }
 
-    for (int x = 0; x < 5; x++) {
-        vehicles[x]->output();
+    for (int x = 0; x < 2; x++) {
+        vehicles[x]->beep();
     }
 
-    for (int x = 0; x < 5; x++) {
-        vehicles[x]->beep();
+    cout << endl << endl;
+
+    CustomVector<Vehicle*> list;
+    
+    for (int x = 0; x < 2; x++) {
+        list.push_back(vehicles[x]);
+    }
+
+    for (int x = 0; x < 2; x++) {
+        list[x]->output();
+        cout << endl;
+    }
+
+    for (int x = 0; x < list.getSize(); x++) {
+        list[x]->output();
+        cout << endl;
     }
 }
