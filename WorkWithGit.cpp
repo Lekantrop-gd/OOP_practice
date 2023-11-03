@@ -5,6 +5,8 @@
 #include "CustomVector.h"
 #include <vector>
 #include <algorithm>
+#include <list>
+#include <map>
 
 using namespace std;
 
@@ -22,56 +24,59 @@ int randIntOdd(int minInclusiveValue, int maxInclusiveValue) {
     return randOdd;
 }
 
+int randIntEven(int minInclusiveValue, int maxInclusiveValue) {
+    int randOdd = 0;
+
+    do {
+        randOdd = randInt(minInclusiveValue, maxInclusiveValue);
+    } while (randOdd % 2 != 0);
+
+    return randOdd;
+}
+
 int main()
 {
     srand(time(nullptr));
 
+    /*
+
 #pragma region lab5
-    //Vehicle* vehicles[2];
-    //int choice;
+    Vehicle* vehicles[2];
+    int choice;
 
-    //for (short x = 0; x < 2; x++) {
-    //    cout << "1. Car\n2. Bus\nChoose what the object do you want to create: "; cin >> choice;
+    for (short x = 0; x < 2; x++) {
+        cout << "1. Car\n2. Bus\nChoose what the object do you want to create: "; cin >> choice;
 
-    //    if (choice == 1) {
-    //        vehicles[x] = new Car;
-    //        vehicles[x]->input();
-    //    }
-    //    else {
-    //        vehicles[x] = new Bus;
-    //        vehicles[x]->input();
-    //    }
+        if (choice == 1) {
+            vehicles[x] = new Car;
+            vehicles[x]->input();
+        }
+        else {
+            vehicles[x] = new Bus;
+            vehicles[x]->input();
+        }
 
-    //    cout << endl;
-    //}
+        cout << endl;
+    }
 
-    //for (int x = 0; x < 2; x++) {
-    //    vehicles[x]->beep();
-    //}
-
-    //cout << endl << endl;
+    cout << endl << endl;
 
 #pragma endregion (done)
 
 #pragma region lab6
 
-    //CustomVector<Vehicle*> list;
-    //
-    //for (int x = 0; x < 2; x++) {
-    //    list.push_back(vehicles[x]);
-    //}
+    CustomVector<Vehicle*> list;
+    
+    for (int x = 0; x < 2; x++) {
+        list.push_back(vehicles[x]);
+    }
 
-    //for (int x = 0; x < 2; x++) {
-    //    list[x]->output();
-    //    cout << endl;
-    //}
+    for (int x = 0; x < list.getSize(); x++) {
+        list[x]->output();
+        cout << endl;
+    }
 
-    //for (int x = 0; x < list.getSize(); x++) {
-    //    list[x]->output();
-    //    cout << endl;
-    //}
-
-#pragma endregion (done)
+#pragma endregion (done)*/
 
 #pragma region lab7
 
@@ -108,7 +113,7 @@ int main()
         cout << element << ", ";
     }
 
-#pragma endregion (error) Fixed!
+#pragma endregion (done)
 
 #pragma region task3
 
@@ -136,7 +141,7 @@ int main()
 
     cout << endl;
 
-#pragma endregion (error)
+#pragma endregion (done)
 
 #pragma region task4
 
@@ -191,6 +196,117 @@ int main()
     }
 
 #pragma endregion (done)
+       
+#pragma endregion (done)
 
-#pragma endregion
+#pragma region lab8
+    /*
+
+    //Task 2
+
+    list<int> ints1(10);
+    list<int> ints2(10);
+
+    for (auto iterator = ints1.begin(); iterator != ints1.end(); iterator++) {
+        *iterator = randIntOdd(1, 100);
+    }
+
+    for (auto iterator = ints2.begin(); iterator != ints2.end(); iterator++) {
+        *iterator = randIntEven(1, 100);
+    }
+
+    for (int element : ints1) {
+        cout << element << ", ";
+    }
+
+    cout << endl << "list 1" << endl;
+
+    for (int element : ints2) {
+        cout << element << ", ";
+    }
+
+    cout << endl << "list 2" << endl;
+
+    //task 3
+
+    ints1.sort();
+    ints2.sort();
+    list<int> ints3;
+    ints3.merge(ints1);
+    ints3.merge(ints2);
+
+    //task 4
+
+    for (int element : ints1) {
+        cout << element << ", ";
+    }
+
+    cout << endl << "Output first list" << endl;
+
+    for (int element : ints2) {
+        cout << element << ", ";
+    }
+
+    cout << endl << "Output second list" << endl;
+
+    for (int element : ints3) {
+        cout << element << ", ";
+    }
+
+    cout << endl << "Output third list" << endl;
+
+    //task 5
+
+    map<int, Vehicle*> vehiclesMap;
+
+    int choose, id;
+
+    while (true) {
+        cout << "1. Create Car \n2. Create Bus \n3. Print vehicle information \n0. Exit \nWhat would you want to do?: "; cin >> choose;
+        
+        if (choose == 3) {
+            if (!vehiclesMap.empty()) {
+                cout << "Input id: "; cin >> id;
+
+                try {
+                    cout << endl;
+                    auto it = vehiclesMap.find(id);
+                    it->second->output();
+                }
+                catch (string a) {
+                    cout << "Given id caused the exception: " << a;
+                }
+
+            }
+            else {
+                cout << "The map is empty!";
+            }
+        }
+
+        if (choose == 1) {
+            int objectId;
+            cout << "Input object id: "; cin >> objectId;
+            Car* car = new Car;
+            car->input();
+            vehiclesMap.insert({ objectId, car });
+        }
+
+        else if (choose == 2) {
+            int objectId;
+            cout << "Input object id: "; cin >> objectId;
+            Bus* bus = new Bus;
+            bus->input();
+            vehiclesMap.insert({ objectId, bus });
+        }
+
+        else if (choose == 0) {
+            exit(0);
+        }
+
+        cout << endl << endl << endl;
+    }
+
+    */
+
+#pragma endregion (done)
 }
