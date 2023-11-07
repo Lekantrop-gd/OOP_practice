@@ -277,6 +277,7 @@ release/moc_mainwindow.cpp: ../PR9Qt/mainwindow.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/QTransform \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../PR9Qt/Car.h \
 		release/moc_predefs.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/bin/moc.exe
 	B:\College\Programs\QTApplication\6.6.0\mingw_64\bin\moc.exe $(DEFINES) --include B:/College/Practice/Lab1/WorkWithGit/WorkWithGit/SDI/build-PR9Qt-Desktop_Qt_6_6_0_MinGW_64_bit-Debug/release/moc_predefs.h -IB:/College/Programs/QTApplication/6.6.0/mingw_64/mkspecs/win32-g++ -IB:/College/Practice/Lab1/WorkWithGit/WorkWithGit/SDI/PR9Qt -IB:/College/Programs/QTApplication/6.6.0/mingw_64/include -IB:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets -IB:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui -IB:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore -I. -IB:/College/Programs/QTApplication/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IB:/College/Programs/QTApplication/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IB:/College/Programs/QTApplication/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IB:/College/Programs/QTApplication/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IB:/College/Programs/QTApplication/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IB:/College/Programs/QTApplication/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\PR9Qt\mainwindow.h -o release\moc_mainwindow.cpp
@@ -469,6 +470,7 @@ release/main.o: ../PR9Qt/main.cpp ../PR9Qt/mainwindow.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/QTransform \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../PR9Qt/Car.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
@@ -658,50 +660,11 @@ release/mainwindow.o: ../PR9Qt/mainwindow.cpp ../PR9Qt/mainwindow.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/QTransform \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		../PR9Qt/Car.h \
 		ui_mainwindow.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QVariant \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLabel \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qpicture.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QMenuBar \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmenubar.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmenu.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QPushButton \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QSpacerItem \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QStatusBar \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstatusbar.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QVBoxLayout \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QWidget
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qdialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\mainwindow.o ..\PR9Qt\mainwindow.cpp
 
 release/Car.o: ../PR9Qt/Car.cpp ../PR9Qt/Car.h

@@ -5,9 +5,13 @@
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , car(nullptr)
 {
     ui->setupUi(this);
     setActiveRightPanel(false);
+    connect(ui->action, &QAction::triggered, this, &MainWindow::on_pushButton_clicked);
+    connect(ui->action_2, &QAction::triggered, this, &MainWindow::on_pushButton_2_clicked);
+    connect(ui->action_3, &QAction::triggered, this, &MainWindow::on_pushButton_3_clicked);
 }
 
 MainWindow::~MainWindow()
@@ -39,6 +43,14 @@ void MainWindow::setActiveLabels(bool activeStatus) {
         ui->VinLabel->show();
         ui->SeatsLabel->show();
         ui->DoorsLabel->show();
+        ui->IdLabel->setText("ID");
+        ui->ModelLabel->setText("Модель");
+        ui->YearLabel->setText("Рік випуску");
+        ui->PriceLabel->setText("Ціна");
+        ui->RegistrationNumberLabel->setText("Реєстраційний номер");
+        ui->VinLabel->setText("Він-код");
+        ui->SeatsLabel->setText("Кількість сидінь");
+        ui->DoorsLabel->setText("Кількість дверей");
         this->areLanelsActive = true;
     }
     else {
@@ -89,11 +101,15 @@ void MainWindow::setActiveRightPanel(bool activeStatus)
         setActiveInputs(true);
         setActiveLabels(true);
         this->isRightPanelActive = true;
+        ui->horizontalSpacer->changeSize(ui->horizontalSpacer->geometry().width(), ui->horizontalSpacer->geometry().height(), QSizePolicy::Fixed);
+        ui->horizontalSpacer_2->changeSize(ui->horizontalSpacer->geometry().width(), ui->horizontalSpacer->geometry().height(), QSizePolicy::Fixed);
     }
     else {
         setActiveInputs(false);
         setActiveLabels(false);
         this->isRightPanelActive = false;
+        ui->horizontalSpacer->changeSize(ui->horizontalSpacer->geometry().width(), ui->horizontalSpacer->geometry().height(), QSizePolicy::Ignored);
+        ui->horizontalSpacer_2->changeSize(ui->horizontalSpacer->geometry().width(), ui->horizontalSpacer->geometry().height(), QSizePolicy::Ignored);
     }
 }
 
@@ -128,12 +144,13 @@ void MainWindow::on_pushButton_4_clicked()
     else {
         QMessageBox::critical(this, "Підозра на скам", "Ви ввели не всі значення!");
     }
+    setActiveRightPanel(false);
 }
 
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    try {
+    if (this->car) {
         setActiveRightPanel(false);
         setActiveLabels(true);
         ui->IdLabel->setText("ID: " + QString::number(this->car->getId()));
@@ -144,7 +161,8 @@ void MainWindow::on_pushButton_2_clicked()
         ui->VinLabel->setText("Він-код: " + QString::fromStdString(this->car->getVinCode()));
         ui->SeatsLabel->setText("Кількість сидінь: " + QString::number(this->car->getNumberOfSeats()));
         ui->DoorsLabel->setText("Кількість дверей: " + QString::number(this->car->getNumberOfDoors()));
-    } catch (...) {
-
+        ui->pushButton_5->show();
+    } else {
+        QMessageBox::critical(this, "Підозра на скам", "Ви ввели не всі значення!");
     }
 }

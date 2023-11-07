@@ -10,12 +10,14 @@
 #define UI_MAINWINDOW_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
 #include <QtWidgets/QMainWindow>
+#include <QtWidgets/QMenu>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpacerItem>
@@ -28,6 +30,9 @@ QT_BEGIN_NAMESPACE
 class Ui_MainWindow
 {
 public:
+    QAction *action;
+    QAction *action_2;
+    QAction *action_3;
     QWidget *centralwidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *verticalLayout;
@@ -61,6 +66,7 @@ public:
     QSpacerItem *verticalSpacer_4;
     QSpacerItem *horizontalSpacer_2;
     QMenuBar *menubar;
+    QMenu *menuMenu;
     QStatusBar *statusbar;
 
     void setupUi(QMainWindow *MainWindow)
@@ -71,6 +77,12 @@ public:
         MainWindow->setStyleSheet(QString::fromUtf8("QMainWindow {\n"
 "	background-color: rgb(22, 22, 22)\n"
 "}"));
+        action = new QAction(MainWindow);
+        action->setObjectName("action");
+        action_2 = new QAction(MainWindow);
+        action_2->setObjectName("action_2");
+        action_3 = new QAction(MainWindow);
+        action_3->setObjectName("action_3");
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName("centralwidget");
         horizontalLayout = new QHBoxLayout(centralwidget);
@@ -420,10 +432,21 @@ public:
         menubar = new QMenuBar(MainWindow);
         menubar->setObjectName("menubar");
         menubar->setGeometry(QRect(0, 0, 880, 21));
+        menubar->setStyleSheet(QString::fromUtf8("QMenuBar {\n"
+"	color: #FFF;\n"
+"	background-color: rgb(27, 27, 27);\n"
+"}"));
+        menuMenu = new QMenu(menubar);
+        menuMenu->setObjectName("menuMenu");
         MainWindow->setMenuBar(menubar);
         statusbar = new QStatusBar(MainWindow);
         statusbar->setObjectName("statusbar");
         MainWindow->setStatusBar(statusbar);
+
+        menubar->addAction(menuMenu->menuAction());
+        menuMenu->addAction(action);
+        menuMenu->addAction(action_2);
+        menuMenu->addAction(action_3);
 
         retranslateUi(MainWindow);
 
@@ -433,11 +456,14 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
+        action->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270 \320\276\320\261'\321\224\320\272\321\202", nullptr));
+        action_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\226\320\264\320\276\320\261\321\200\320\260\320\267\320\270\321\202\320\270 \320\276\320\261'\321\224\320\272\321\202", nullptr));
+        action_3->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
         label->setText(QCoreApplication::translate("MainWindow", "Black Fox", nullptr));
         pushButton->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270 \320\276\320\261'\321\224\320\272\321\202", nullptr));
         pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\222\321\226\320\264\320\276\320\261\321\200\320\260\320\267\320\270\321\202\320\270 \321\201\321\202\320\262\320\276\321\200\320\265\320\275\320\270\320\271 \320\276\320\261'\321\224\320\272\321\202", nullptr));
         pushButton_3->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
-        IdLabel->setText(QCoreApplication::translate("MainWindow", "Id", nullptr));
+        IdLabel->setText(QCoreApplication::translate("MainWindow", "ID", nullptr));
         ModelLabel->setText(QCoreApplication::translate("MainWindow", "\320\234\320\276\320\264\320\265\320\273\321\214", nullptr));
         YearLabel->setText(QCoreApplication::translate("MainWindow", "\320\240\321\226\320\272 \320\262\320\270\320\277\321\203\321\201\320\272\321\203", nullptr));
         PriceLabel->setText(QCoreApplication::translate("MainWindow", "\320\246\321\226\320\275\320\260", nullptr));
@@ -447,6 +473,7 @@ public:
         DoorsLabel->setText(QCoreApplication::translate("MainWindow", "\320\232\321\226\320\273\321\214\320\272\321\226\321\201\321\202\321\214 \320\264\320\262\320\265\321\200\320\265\320\271", nullptr));
         pushButton_5->setText(QCoreApplication::translate("MainWindow", "\320\235\320\260\320\267\320\260\320\264", nullptr));
         pushButton_4->setText(QCoreApplication::translate("MainWindow", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270", nullptr));
+        menuMenu->setTitle(QCoreApplication::translate("MainWindow", "\320\234\320\265\320\275\321\216", nullptr));
     } // retranslateUi
 
 };

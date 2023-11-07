@@ -250,7 +250,7 @@ QPushButton:hover {
 }</string>
         </property>
         <property name="text">
-         <string>Id</string>
+         <string>ID</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
@@ -689,8 +689,38 @@ QPushButton:hover {
      <height>21</height>
     </rect>
    </property>
+   <property name="styleSheet">
+    <string notr="true">QMenuBar {
+	color: #FFF;
+	background-color: rgb(27, 27, 27);
+}</string>
+   </property>
+   <widget class="QMenu" name="menuMenu">
+    <property name="title">
+     <string>Меню</string>
+    </property>
+    <addaction name="action"/>
+    <addaction name="action_2"/>
+    <addaction name="action_3"/>
+   </widget>
+   <addaction name="menuMenu"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
+  <action name="action">
+   <property name="text">
+    <string>Створити об'єкт</string>
+   </property>
+  </action>
+  <action name="action_2">
+   <property name="text">
+    <string>Відобразити об'єкт</string>
+   </property>
+  </action>
+  <action name="action_3">
+   <property name="text">
+    <string>Вихід</string>
+   </property>
+  </action>
  </widget>
  <resources/>
  <connections/>
