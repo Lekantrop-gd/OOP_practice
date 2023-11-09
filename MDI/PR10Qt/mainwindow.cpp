@@ -11,7 +11,6 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    connect(this, &MainWindow::recivedFruit, this, &MainWindow::addFruit);
     this->dialogFruitList = new DialogFruitList;
     this->dialogFruitList->setWindowTitle("Відображення фруктів");
     this->dialogDessertList = new DialogDessertList;
@@ -35,7 +34,7 @@ void MainWindow::on_pushButton_clicked()
     DialogFruit dialogFruit;
     dialogFruit.setWindowTitle("Створення фрукта");
     dialogFruit.setModal(true);
-    connect(&dialogFruit, &DialogFruit::created, this, &MainWindow::recivedFruit);
+    connect(&dialogFruit, &DialogFruit::created, this, &MainWindow::addFruit);
     connect(this, &MainWindow::addedFruit, this->dialogFruitList, &DialogFruitList::updateList);
     dialogFruit.exec();
 }
@@ -44,7 +43,7 @@ void MainWindow::on_pushButton_2_clicked()
 {
     DialogDessert dialogDessert;
     dialogDessert.setWindowTitle("Створення десерта");
-    connect(&dialogDessert, &DialogDessert::created, this, &MainWindow::recivedDessert);
+    connect(&dialogDessert, &DialogDessert::created, this, &MainWindow::addDessert);
     connect(this, &MainWindow::addedDessert, this->dialogDessertList, &DialogDessertList::updateList);
     dialogDessert.setModal(true);
     dialogDessert.exec();

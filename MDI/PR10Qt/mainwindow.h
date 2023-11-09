@@ -17,8 +17,6 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 signals:
-    void recivedFruit(Fruit *fruit);
-    void recivedDessert(Dessert *dessert);
     void addedFruit(QList<Fruit*> fruits);
     void addedDessert(QList<Dessert*> desserts);
 
@@ -37,12 +35,14 @@ private slots:
 
     void on_pushButton_4_clicked();
 
+    void addFruit(Fruit *fruit);
+
+    void addDessert(Dessert *dessert);
+
 private:
     Ui::MainWindow *ui;
     QList<Fruit*> fruits;
     QList<Dessert*> desserts;
-    void addFruit(Fruit *fruit);
-    void addDessert(Dessert *dessert);
     DialogFruitList *dialogFruitList;
     DialogDessertList *dialogDessertList;
 };
