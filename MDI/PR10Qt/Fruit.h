@@ -13,5 +13,6 @@ public:
     ~Fruit();
     string getVitamins() const;
     string getTaste() const;
+    void setVitamins(const string &newVitamins);
 };
 

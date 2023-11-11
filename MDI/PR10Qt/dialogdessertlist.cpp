@@ -1,5 +1,6 @@
 #include "dialogdessertlist.h"
 #include "ui_dialogdessertlist.h"
+#include <QSqlTableModel>
 
 DialogDessertList::DialogDessertList(QWidget *parent) :
     QDialog(parent),
@@ -13,10 +14,11 @@ DialogDessertList::~DialogDessertList()
     delete ui;
 }
 
-void DialogDessertList::updateList(QList<Dessert*> desserts)
+void DialogDessertList::updateList(DBmanager *dbmanager)
 {
-    ui->listWidget->clear();
-    for (int x = 0; x < desserts.size(); x++) {
-        ui->listWidget->addItem(QString::fromStdString(desserts[x]->getType()));
-    }
+    QSqlTableModel *model = new QSqlTableModel(this, dbmanager->getDB());
+    model->setTable(dbmanager->DESSERTS_TABLE_NAME);
+    model->select();
+
+    ui->tableView->setModel(model);
 }

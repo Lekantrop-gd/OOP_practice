@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <Dessert.h>
+#include "dbmanager.h"
 
 namespace Ui {
 class DialogDessertList;
@@ -13,7 +14,7 @@ class DialogDessertList : public QDialog
     Q_OBJECT
 
 public slots:
-    void updateList(QList<Dessert*> dessert);
+    void updateList(DBmanager *dbmanager);
 
 public:
     explicit DialogDessertList(QWidget *parent = nullptr);

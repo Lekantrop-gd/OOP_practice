@@ -7,6 +7,7 @@
 #include "Dessert.h"
 #include "dialogfruitlist.h"
 #include "dialogdessertlist.h"
+#include "dbmanager.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -17,8 +18,8 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 signals:
-    void addedFruit(QList<Fruit*> fruits);
-    void addedDessert(QList<Dessert*> desserts);
+    void addedFruit(DBmanager *dbmanager);
+    void addedDessert(DBmanager *dbmanager);
 
 public:
     MainWindow(QWidget *parent = nullptr);
@@ -41,8 +42,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    QList<Fruit*> fruits;
-    QList<Dessert*> desserts;
+    DBmanager *dbmanager;
     DialogFruitList *dialogFruitList;
     DialogDessertList *dialogDessertList;
 };

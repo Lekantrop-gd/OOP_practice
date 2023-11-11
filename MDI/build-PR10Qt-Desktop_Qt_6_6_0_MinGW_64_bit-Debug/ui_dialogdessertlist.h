@@ -13,7 +13,8 @@
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QListWidget>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
 
 QT_BEGIN_NAMESPACE
 
@@ -21,22 +22,23 @@ class Ui_DialogDessertList
 {
 public:
     QHBoxLayout *horizontalLayout;
-    QListWidget *listWidget;
+    QTableView *tableView;
 
     void setupUi(QDialog *DialogDessertList)
     {
         if (DialogDessertList->objectName().isEmpty())
             DialogDessertList->setObjectName("DialogDessertList");
-        DialogDessertList->resize(261, 258);
+        DialogDessertList->resize(428, 268);
         DialogDessertList->setStyleSheet(QString::fromUtf8("QDialog {\n"
 "	background-color: rgb(27, 27, 27);\n"
 "}"));
         horizontalLayout = new QHBoxLayout(DialogDessertList);
         horizontalLayout->setObjectName("horizontalLayout");
-        listWidget = new QListWidget(DialogDessertList);
-        listWidget->setObjectName("listWidget");
+        tableView = new QTableView(DialogDessertList);
+        tableView->setObjectName("tableView");
+        tableView->setMinimumSize(QSize(410, 250));
 
-        horizontalLayout->addWidget(listWidget);
+        horizontalLayout->addWidget(tableView);
 
 
         retranslateUi(DialogDessertList);

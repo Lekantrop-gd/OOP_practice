@@ -7,7 +7,19 @@ Dessert::Dessert()
 Dessert::Dessert(const string& type, int calories, int sugarContent, const string& ingredients) :
 	Food(type, calories), sugarContent(sugarContent), ingredients(ingredients)
 {
+
 }
+
+int Dessert::getSugarContent() const
+{
+    return sugarContent;
+}
+
+string Dessert::getIngredients() const
+{
+    return ingredients;
+}
+
 
 void Dessert::input()
 {

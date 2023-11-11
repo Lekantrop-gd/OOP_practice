@@ -1,6 +1,7 @@
 #include "dialogfruit.h"
 #include "ui_dialogfruit.h"
 #include <QMessageBox>
+#include <QDebug>
 
 DialogFruit::DialogFruit(QWidget *parent) :
     QDialog(parent),

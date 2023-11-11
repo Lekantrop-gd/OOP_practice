@@ -1,6 +1,7 @@
 #include "dialogdessert.h"
 #include "ui_dialogdessert.h"
 #include <QMessageBox>
+#include <QDebug>
 
 DialogDessert::DialogDessert(QWidget *parent) :
     QDialog(parent),

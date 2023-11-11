@@ -228,6 +228,7 @@ Makefile: ../PR10Qt/PR10Qt.pro B:/College/Programs/QTApplication/6.6.0/mingw_64/
 		../PR10Qt/PR10Qt.pro \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Widgets.prl \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Gui.prl \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Sql.prl \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Core.prl \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6EntryPoint.prl \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/mkspecs/features/build_pass.prf
@@ -390,6 +391,7 @@ B:/College/Programs/QTApplication/6.6.0/mingw_64/mkspecs/features/lex.prf:
 ../PR10Qt/PR10Qt.pro:
 B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Widgets.prl:
 B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Gui.prl:
+B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Sql.prl:
 B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6Core.prl:
 B:/College/Programs/QTApplication/6.6.0/mingw_64/lib/Qt6EntryPoint.prl:
 B:/College/Programs/QTApplication/6.6.0/mingw_64/mkspecs/features/build_pass.prf:

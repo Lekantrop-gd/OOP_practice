@@ -5,16 +5,27 @@
 #include "dialogfruitlist.h"
 #include "dialogdessertlist.h"
 #include "QListWidget"
+#include "dbmanager.h"
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
+    cout << 123;
     ui->setupUi(this);
     this->dialogFruitList = new DialogFruitList;
     this->dialogFruitList->setWindowTitle("Відображення фруктів");
     this->dialogDessertList = new DialogDessertList;
     this->dialogDessertList->setWindowTitle("Відображення десертів");
+    this->dbmanager = new DBmanager;
+    if(dbmanager->connectToDataBase()) {
+        qDebug() << "Database is open";
+    }
+
+    this->dialogFruitList->updateList(this->dbmanager);
+    this->dialogDessertList->updateList(this->dbmanager);
+
+    dbmanager->createTables();
 }
 
 MainWindow::~MainWindow()
@@ -26,6 +37,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_5_clicked()
 {
     QApplication::exit();
+    dbmanager->closeDataBase();
 }
 
 
@@ -62,12 +74,12 @@ void MainWindow::on_pushButton_4_clicked()
 
 void MainWindow::addFruit(Fruit *fruit)
 {
-    fruits.append(fruit);
-    emit addedFruit(this->fruits);
+    this->dbmanager->inserIntoTable(*fruit);
+    emit addedFruit(this->dbmanager);
 }
 
 void MainWindow::addDessert(Dessert *dessert)
 {
-    desserts.append(dessert);
-    emit addedDessert(this->desserts);
+    this->dbmanager->inserIntoTable(*dessert);
+    emit addedDessert(this->dbmanager);
 }

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>276</width>
-    <height>272</height>
+    <width>428</width>
+    <height>268</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,14 @@
   </property>
   <layout class="QHBoxLayout" name="horizontalLayout">
    <item>
-    <widget class="QListWidget" name="listWidget"/>
+    <widget class="QTableView" name="tableView">
+     <property name="minimumSize">
+      <size>
+       <width>410</width>
+       <height>250</height>
+      </size>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>

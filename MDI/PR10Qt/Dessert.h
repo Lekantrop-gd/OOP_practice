@@ -9,6 +9,8 @@ public:
 	Dessert();
 	Dessert(const string& type, int calories, int sugarContent, const string& ingredients);
 	void input() override;
-	void const print() override;
-	~Dessert();
+    void const print() override;
+    ~Dessert();
+    int getSugarContent() const;
+    string getIngredients() const;
 };

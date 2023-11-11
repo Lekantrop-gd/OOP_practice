@@ -1,15 +1,5 @@
 #include "Food.h"
 
-string Food::getType() const
-{
-    return type;
-}
-
-int Food::getCalories() const
-{
-    return calories;
-}
-
 Food::Food()
 {
 	
@@ -18,6 +8,16 @@ Food::Food()
 Food::Food(const string& type, int calories)
 	: type(type), calories(calories)
 {
+}
+
+string Food::getType() const
+{
+    return type;
+}
+
+int Food::getCalories() const
+{
+    return calories;
 }
 
 void Food::input()

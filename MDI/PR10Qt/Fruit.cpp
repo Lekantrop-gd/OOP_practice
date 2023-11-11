@@ -28,3 +28,13 @@ void const Fruit::print()
 Fruit::~Fruit()
 {
 }
+
+string Fruit::getVitamins() const
+{
+    return this->vitamins;
+}
+
+string Fruit::getTaste() const
+{
+    return this->taste;
+}
