@@ -11,21 +11,17 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
-    cout << 123;
     ui->setupUi(this);
     this->dialogFruitList = new DialogFruitList;
     this->dialogFruitList->setWindowTitle("Відображення фруктів");
     this->dialogDessertList = new DialogDessertList;
     this->dialogDessertList->setWindowTitle("Відображення десертів");
+
     this->dbmanager = new DBmanager;
-    if(dbmanager->connectToDataBase()) {
-        qDebug() << "Database is open";
-    }
+    dbmanager->createTables();
 
     this->dialogFruitList->updateList(this->dbmanager);
     this->dialogDessertList->updateList(this->dbmanager);
-
-    dbmanager->createTables();
 }
 
 MainWindow::~MainWindow()

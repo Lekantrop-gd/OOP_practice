@@ -2,11 +2,27 @@
 #include <QSqlQuery>
 #include <QSqlError>
 #include <QDebug>
+#include <QFile>
+#include <QDateTime>
+
+void logError(QString errorText) {
+    QFile file("log.txt");
+    if (file.open(QIODevice::Append)) {
+        QTextStream stream(&file);
+        stream << "\n\n\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + ": " + errorText;
+    }
+    file.close();
+}
 
 DBmanager::DBmanager()
 {
     this->db = QSqlDatabase::addDatabase("QSQLITE");
     this->db.setDatabaseName("DataBase.db");
+
+    if (!this->connectToDataBase()) {
+        logError("Unable to open database. Error description: " + db.lastError().text());
+        qFatal() << "Unable to open database. Error description: " + db.lastError().text();
+    }
 }
 
 bool DBmanager::connectToDataBase()
@@ -20,6 +36,10 @@ bool DBmanager::connectToDataBase()
 void DBmanager::closeDataBase()
 {
     this->db.close();
+    if (this->db.lastError().text() != "") {
+        logError("Unable to close database. Error description: " + this->db.lastError().text());
+        qWarning() << "Unable to close database. Error description: " + this->db.lastError().text();
+    }
 }
 
 QSqlDatabase DBmanager::getDB()
@@ -38,8 +58,8 @@ bool DBmanager::createTables()
                     " )"
                     ))
     {
-        qDebug() << "DataBase: error of create table: " + this->FRUITS_TABLE_NAME;
-        qDebug() << query.lastError().text();
+        logError("Unable to create table: " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text());
+        qWarning() << "Unable to create table: " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text();
         return false;
     }
     if (!query.exec("CREATE TABLE " + this->DESSERTS_TABLE_NAME + " ("
@@ -50,8 +70,8 @@ bool DBmanager::createTables()
                     " )"
                           ))
     {
-        qDebug() << "DataBase: error of create tables" + this->DESSERTS_TABLE_NAME;
-        qDebug() << query.lastError().text();
+        logError("Unable to create table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text());
+        qWarning() << "Unable to create table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text();
         return false;
     }
     return true;
@@ -69,8 +89,8 @@ bool DBmanager::inserIntoTable(const Fruit &fruit)
 
     if (!query.exec())
     {
-        qDebug() << "DataBase: error of insert into " << this->FRUITS_TABLE_NAME;
-        qDebug() << query.lastError().text();
+        logError("Unable to insert into table " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text());
+        qWarning() << "Unable to insert into table " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text();
         return false;
     }
     else return true;
@@ -88,8 +108,8 @@ bool DBmanager::inserIntoTable(const Dessert &dessert)
 
     if (!query.exec())
     {
-        qDebug() << "DataBase: error of insert into " << this->DESSERTS_TABLE_NAME;
-        qDebug() << query.lastError().text();
+        logError("Unable to insert into table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text());
+        qWarning() << "Unable to insert into table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text();
         return false;
     }
     else return true;
