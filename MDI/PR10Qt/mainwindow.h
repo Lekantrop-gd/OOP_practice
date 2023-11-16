@@ -26,19 +26,19 @@ public:
     ~MainWindow();
 
 private slots:
-    void on_pushButton_5_clicked();
-
-    void on_pushButton_clicked();
-
-    void on_pushButton_2_clicked();
-
-    void on_pushButton_3_clicked();
-
-    void on_pushButton_4_clicked();
-
     void addFruit(Fruit *fruit);
 
     void addDessert(Dessert *dessert);
+
+    void on_addFuit_clicked();
+
+    void on_exit_clicked();
+
+    void on_addDessert_clicked();
+
+    void on_listFruits_clicked();
+
+    void on_listDesserts_clicked();
 
 private:
     Ui::MainWindow *ui;

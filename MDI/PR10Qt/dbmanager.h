@@ -22,9 +22,9 @@ public:
     bool connectToDataBase();
     void closeDataBase();
     QSqlDatabase getDB();
-    bool createTables();
-    bool inserIntoTable(const Fruit& fruit);
-    bool inserIntoTable(const Dessert& dessert);
+    void createTables();
+    void inserIntoTable(const Fruit& fruit);
+    void inserIntoTable(const Dessert& dessert);
 };
 
 #endif // DBMANAGER_H

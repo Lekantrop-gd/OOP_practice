@@ -50,7 +50,8 @@ OBJECTS_DIR   = release
 
 ####### Files
 
-SOURCES       = ..\PR10Qt\dbmanager.cpp \
+SOURCES       = ..\PR10Qt\custommessagehandler.cpp \
+		..\PR10Qt\dbmanager.cpp \
 		..\PR10Qt\dialogdessert.cpp \
 		..\PR10Qt\dialogdessertlist.cpp \
 		..\PR10Qt\dialogfruit.cpp \
@@ -64,7 +65,8 @@ SOURCES       = ..\PR10Qt\dbmanager.cpp \
 		release\moc_dialogfruit.cpp \
 		release\moc_dialogfruitlist.cpp \
 		release\moc_mainwindow.cpp
-OBJECTS       = release/dbmanager.o \
+OBJECTS       = release/custommessagehandler.o \
+		release/dbmanager.o \
 		release/dialogdessert.o \
 		release/dialogdessertlist.o \
 		release/dialogfruit.o \
@@ -80,7 +82,8 @@ OBJECTS       = release/dbmanager.o \
 		release/moc_dialogfruitlist.o \
 		release/moc_mainwindow.o
 
-DIST          =  ..\PR10Qt\dbmanager.h \
+DIST          =  ..\PR10Qt\custommessagehandler.h \
+		..\PR10Qt\dbmanager.h \
 		..\PR10Qt\dialogdessert.h \
 		..\PR10Qt\dialogdessertlist.h \
 		..\PR10Qt\dialogfruit.h \
@@ -88,7 +91,8 @@ DIST          =  ..\PR10Qt\dbmanager.h \
 		..\PR10Qt\mainwindow.h \
 		..\PR10Qt\Food.h \
 		..\PR10Qt\Fruit.h \
-		..\PR10Qt\Dessert.h ..\PR10Qt\dbmanager.cpp \
+		..\PR10Qt\Dessert.h ..\PR10Qt\custommessagehandler.cpp \
+		..\PR10Qt\dbmanager.cpp \
 		..\PR10Qt\dialogdessert.cpp \
 		..\PR10Qt\dialogdessertlist.cpp \
 		..\PR10Qt\dialogfruit.cpp \
@@ -117,10 +121,10 @@ qmake: FORCE
 qmake_all: FORCE
 
 dist:
-	$(ZIP) PR10Qt.zip $(SOURCES) $(DIST) ..\PR10Qt\PR10Qt.pro B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\spec_pre.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\device_config.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\sanitize.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\gcc-base.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\g++-base.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\windows-vulkan.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\g++-win32.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\windows-desktop.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\qconfig.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_ext_freetype.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_ext_libpng.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_concurrent.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_core.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_core_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_dbus.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_designer.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_designer_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_gui.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_gui_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_help.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_help_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssettings.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_linguist.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_linguist_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_network.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_network_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_opengl.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_png_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_printsupport.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversionsprivate.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversionsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchgeneratorsprivate.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchgeneratorsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qml.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qml_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltest.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quick.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quick_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_sql.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_sql_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svg.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svg_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_testlib.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_tools_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_uitools.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_widgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_xml.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_xml_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qt_functions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qt_config.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\win32-g++\qmake.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\spec_post.prf .qmake.stash B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\exclusive_builds.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\toolchain.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\default_pre.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\default_pre.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\resolve_config.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\exclusive_builds_post.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\default_post.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\build_pass.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qml_debug.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\entrypoint.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\precompile_header.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\warn_on.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\permissions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qt.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\resources_functions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\resources.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\moc.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\opengl.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\uic.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qmake_use.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\file_copies.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\windows.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\testcase_targets.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\exceptions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\yacc.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\lex.prf ..\PR10Qt\PR10Qt.pro B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Widgets.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Gui.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Sql.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Core.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6EntryPoint.prl    B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\data\dummy.cpp ..\PR10Qt\dbmanager.h ..\PR10Qt\dialogdessert.h ..\PR10Qt\dialogdessertlist.h ..\PR10Qt\dialogfruit.h ..\PR10Qt\dialogfruitlist.h ..\PR10Qt\mainwindow.h ..\PR10Qt\Food.h ..\PR10Qt\Fruit.h ..\PR10Qt\Dessert.h  ..\PR10Qt\dbmanager.cpp ..\PR10Qt\dialogdessert.cpp ..\PR10Qt\dialogdessertlist.cpp ..\PR10Qt\dialogfruit.cpp ..\PR10Qt\dialogfruitlist.cpp ..\PR10Qt\main.cpp ..\PR10Qt\mainwindow.cpp ..\PR10Qt\Food.cpp ..\PR10Qt\Fruit.cpp ..\PR10Qt\Dessert.cpp ..\PR10Qt\dialogdessert.ui ..\PR10Qt\dialogdessertlist.ui ..\PR10Qt\dialogfruit.ui ..\PR10Qt\dialogfruitlist.ui ..\PR10Qt\mainwindow.ui    
+	$(ZIP) PR10Qt.zip $(SOURCES) $(DIST) ..\PR10Qt\PR10Qt.pro B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\spec_pre.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\device_config.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\sanitize.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\gcc-base.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\g++-base.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\windows_vulkan_sdk.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\windows-vulkan.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\g++-win32.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\common\windows-desktop.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\qconfig.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_ext_freetype.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_ext_libjpeg.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_ext_libpng.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_concurrent.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_concurrent_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_core.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_core_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_dbus.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_dbus_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_designer.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_designer_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_designercomponents_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_devicediscovery_support_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_entrypoint_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_example_icons_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_fb_support_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_freetype_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_gui.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_gui_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_harfbuzz_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_help.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_help_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_jpeg_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsanimation.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsanimation_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsfolderlistmodel_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labsqmlmodels_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssettings.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssettings_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labssharedimage_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_labswavefrontmesh_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_linguist.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_linguist_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_network.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_network_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_opengl.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_opengl_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_openglwidgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_packetprotocol_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_png_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_printsupport.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_printsupport_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatch_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversionsprivate.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchconversionsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchgeneratorsprivate.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qdoccatchgeneratorsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qml.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qml_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcompiler_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcore.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlcore_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmldebug_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmldom_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlintegration_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmllocalstorage_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlls_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlmodels_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltest.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltest_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltoolingsettings_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmltyperegistrar_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_qmlxmllistmodel_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quick.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quick_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrols2impl_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickcontrolstestutilsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2quickimpl_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickdialogs2utils_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickeffects_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicklayouts_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickparticles_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickshapes_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicktemplates2_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quicktestutilsprivate_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_quickwidgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_sql.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_sql_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svg.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svg_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_svgwidgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_testlib.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_testlib_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_tools_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_uiplugin.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_uitools.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_uitools_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_widgets.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_widgets_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_xml.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_xml_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\modules\qt_lib_zlib_private.pri B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qt_functions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qt_config.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\win32-g++\qmake.conf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\spec_post.prf .qmake.stash B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\exclusive_builds.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\toolchain.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\default_pre.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\default_pre.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\resolve_config.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\exclusive_builds_post.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\default_post.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\build_pass.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qml_debug.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\entrypoint.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\precompile_header.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\warn_on.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\permissions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qt.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\resources_functions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\resources.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\moc.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\opengl.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\uic.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\qmake_use.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\file_copies.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\win32\windows.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\testcase_targets.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\exceptions.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\yacc.prf B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\lex.prf ..\PR10Qt\PR10Qt.pro B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Widgets.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Gui.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Sql.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6Core.prl B:\College\Programs\QTApplication\6.6.0\mingw_64\lib\Qt6EntryPoint.prl    B:\College\Programs\QTApplication\6.6.0\mingw_64\mkspecs\features\data\dummy.cpp ..\PR10Qt\custommessagehandler.h ..\PR10Qt\dbmanager.h ..\PR10Qt\dialogdessert.h ..\PR10Qt\dialogdessertlist.h ..\PR10Qt\dialogfruit.h ..\PR10Qt\dialogfruitlist.h ..\PR10Qt\mainwindow.h ..\PR10Qt\Food.h ..\PR10Qt\Fruit.h ..\PR10Qt\Dessert.h  ..\PR10Qt\custommessagehandler.cpp ..\PR10Qt\dbmanager.cpp ..\PR10Qt\dialogdessert.cpp ..\PR10Qt\dialogdessertlist.cpp ..\PR10Qt\dialogfruit.cpp ..\PR10Qt\dialogfruitlist.cpp ..\PR10Qt\main.cpp ..\PR10Qt\mainwindow.cpp ..\PR10Qt\Food.cpp ..\PR10Qt\Fruit.cpp ..\PR10Qt\Dessert.cpp ..\PR10Qt\dialogdessert.ui ..\PR10Qt\dialogdessertlist.ui ..\PR10Qt\dialogfruit.ui ..\PR10Qt\dialogfruitlist.ui ..\PR10Qt\mainwindow.ui    
 
 clean: compiler_clean 
-	-$(DEL_FILE) release\dbmanager.o release\dialogdessert.o release\dialogdessertlist.o release\dialogfruit.o release\dialogfruitlist.o release\main.o release\mainwindow.o release\Food.o release\Fruit.o release\Dessert.o release\moc_dialogdessert.o release\moc_dialogdessertlist.o release\moc_dialogfruit.o release\moc_dialogfruitlist.o release\moc_mainwindow.o
+	-$(DEL_FILE) release\custommessagehandler.o release\dbmanager.o release\dialogdessert.o release\dialogdessertlist.o release\dialogfruit.o release\dialogfruitlist.o release\main.o release\mainwindow.o release\Food.o release\Fruit.o release\Dessert.o release\moc_dialogdessert.o release\moc_dialogdessertlist.o release\moc_dialogfruit.o release\moc_dialogfruitlist.o release\moc_mainwindow.o
 
 distclean: clean 
 	-$(DEL_FILE) .qmake.stash
@@ -1075,6 +1079,147 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
+release/custommessagehandler.o: ../PR10Qt/custommessagehandler.cpp ../PR10Qt/custommessagehandler.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QCoreApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qglobal.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtversionchecks.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtconfiginclude.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qconfig.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtcore-config.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtconfigmacros.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtcoreexports.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcompilerdetection.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qsystemdetection.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qprocessordetection.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtdeprecationmarkers.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtpreprocessorsupport.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qassert.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtnoop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtypes.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtversion.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtclasshelpermacros.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtypeinfo.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcontainerfwd.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qsysinfo.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlogging.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qflags.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcompare_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qatomic.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qbasicatomic.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qatomic_cxx11.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qgenericatomic.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qconstructormacros.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdarwinhelpers.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexceptionhandling.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qforeach.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qttypetraits.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfunctionpointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qglobalstatic.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmalloc.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qminmax.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnumeric.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qoverload.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qswap.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtenvironmentvariables.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtresource.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qttranslation.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qversiontagging.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstring.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qchar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qbytearray.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrefcount.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnamespace.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtmetamacros.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qarraydata.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpair.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qarraydatapointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qarraydataops.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcontainertools_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qxptype_traits.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/q20functional.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/q20memory.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qbytearrayalgorithms.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qbytearrayview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringfwd.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/q20type_traits.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringliteral.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringalgorithms.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlatin1stringview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qanystringview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qutf8stringview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringtokenizer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringbuilder.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreevent.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qobjectdefs.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qobjectdefs_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfunctionaltools_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qobject.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlist.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qhashfunctions.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qiterator.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qbytearraylist.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringlist.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qalgorithms.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringmatcher.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qscopedpointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmetatype.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcompare.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdatastream.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qiodevicebase.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfloat16.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmath.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qiterable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmetacontainer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcontainerinfo.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtaggedpointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qscopeguard.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qobject_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qbindingstorage.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdebug.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtextstream.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qstringconverter_base.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcontiguouscache.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qsharedpointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qshareddata.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qsharedpointer_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmap.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qshareddata_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qset.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qhash.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qvarlengtharray.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qvariant.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/q23utility.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QFile \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfile.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfiledevice.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qiodevice.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QTextStream \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QtDebug \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDateTime \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcalendar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\custommessagehandler.o ..\PR10Qt\custommessagehandler.cpp
+
 release/dbmanager.o: ../PR10Qt/dbmanager.cpp ../PR10Qt/dbmanager.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/QSqlDatabase \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqldatabase.h \
@@ -1197,7 +1342,37 @@ release/dbmanager.o: ../PR10Qt/dbmanager.cpp ../PR10Qt/dbmanager.h \
 		../PR10Qt/Fruit.h \
 		../PR10Qt/Food.h \
 		../PR10Qt/Dessert.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDebug
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDebug \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QFile \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfile.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfiledevice.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qiodevice.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDateTime \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcalendar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
+		../PR10Qt/custommessagehandler.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QCoreApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qnativeinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpointer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QTextStream \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QtDebug
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dbmanager.o ..\PR10Qt\dbmanager.cpp
 
 release/dialogdessert.o: ../PR10Qt/dialogdessert.cpp ../PR10Qt/dialogdessert.h \
@@ -1367,9 +1542,59 @@ release/dialogdessert.o: ../PR10Qt/dialogdessert.cpp ../PR10Qt/dialogdessert.h \
 		../PR10Qt/Dessert.h \
 		../PR10Qt/Food.h \
 		ui_dialogdessert.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QVariant \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QFormLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qformlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLabel \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qpicture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLineEdit \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlineedit.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextcursor.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextformat.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qpen.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextoption.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QPushButton \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDebug
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDebug \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QFile \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfile.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfiledevice.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDateTime \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcalendar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialogdessert.o ..\PR10Qt\dialogdessert.cpp
 
 release/dialogdessertlist.o: ../PR10Qt/dialogdessertlist.cpp ../PR10Qt/dialogdessertlist.h \
@@ -1550,10 +1775,57 @@ release/dialogdessertlist.o: ../PR10Qt/dialogdessertlist.cpp ../PR10Qt/dialogdes
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqlquery.h \
 		../PR10Qt/Fruit.h \
 		ui_dialogdessertlist.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QVariant \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QHeaderView \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qheaderview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qvalidator.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qregularexpression.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qslider.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstyle.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabbar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qrubberband.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QTableView \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtableview.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/QSqlTableModel \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqltablemodel.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqlquerymodel.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqlquerymodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialogdessertlist.o ..\PR10Qt\dialogdessertlist.cpp
 
 release/dialogfruit.o: ../PR10Qt/dialogfruit.cpp ../PR10Qt/dialogfruit.h \
@@ -1723,9 +1995,59 @@ release/dialogfruit.o: ../PR10Qt/dialogfruit.cpp ../PR10Qt/dialogfruit.h \
 		../PR10Qt/Fruit.h \
 		../PR10Qt/Food.h \
 		ui_dialogfruit.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QVariant \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QFormLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qformlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLabel \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qpicture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLineEdit \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlineedit.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextcursor.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextformat.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qpen.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextoption.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QPushButton \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QMessageBox \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmessagebox.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDebug
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDebug \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QFile \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfile.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfiledevice.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QDateTime \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdatetime.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcalendar.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialogfruit.o ..\PR10Qt\dialogfruit.cpp
 
 release/dialogfruitlist.o: ../PR10Qt/dialogfruitlist.cpp ../PR10Qt/dialogfruitlist.h \
@@ -1906,10 +2228,57 @@ release/dialogfruitlist.o: ../PR10Qt/dialogfruitlist.cpp ../PR10Qt/dialogfruitli
 		../PR10Qt/Food.h \
 		../PR10Qt/Dessert.h \
 		ui_dialogfruitlist.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QVariant \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QHBoxLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QHeaderView \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qheaderview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractitemview.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qitemselectionmodel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstyleoption.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qvalidator.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qregularexpression.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qslider.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractslider.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstyle.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabbar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtabwidget.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qrubberband.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QTableView \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qtableview.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/QSqlTableModel \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqltablemodel.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqlquerymodel.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqlquerymodel.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialogfruitlist.o ..\PR10Qt\dialogfruitlist.cpp
 
 release/main.o: ../PR10Qt/main.cpp ../PR10Qt/mainwindow.h \
@@ -2301,6 +2670,48 @@ release/mainwindow.o: ../PR10Qt/mainwindow.cpp ../PR10Qt/mainwindow.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtSql/qsqlquery.h \
 		../PR10Qt/dialogdessertlist.h \
 		ui_mainwindow.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/QVariant \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QApplication \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qeventloop.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qcoreapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfutureinterface.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qmutex.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qdeadlinetimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qelapsedtimer.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qtsan_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qresultstore.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qfuture_impl.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthreadpool.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qthread.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qrunnable.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qexception.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qpromise.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qinputmethod.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qguiapplication_platform.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QLabel \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlabel.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qpicture.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qtextdocument.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QMenuBar \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmenubar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qmenu.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QPushButton \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qpushbutton.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractbutton.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QStatusBar \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstatusbar.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QVBoxLayout \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qboxlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlayoutitem.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qgridlayout.h \
+		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QWidget \
 		../PR10Qt/dialogfruit.h \
 		../PR10Qt/dialogdessert.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/QListWidget \
@@ -2308,12 +2719,10 @@ release/mainwindow.o: ../PR10Qt/mainwindow.cpp ../PR10Qt/mainwindow.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qlistview.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractitemview.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qframe.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qabstractitemmodel.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qitemselectionmodel.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractitemdelegate.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qstyleoption.h \
-		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qlocale.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtWidgets/qabstractspinbox.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtGui/qvalidator.h \
 		B:/College/Programs/QTApplication/6.6.0/mingw_64/include/QtCore/qregularexpression.h \

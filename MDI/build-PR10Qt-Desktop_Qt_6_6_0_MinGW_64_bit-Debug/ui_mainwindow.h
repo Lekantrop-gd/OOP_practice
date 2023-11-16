@@ -26,12 +26,12 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QVBoxLayout *verticalLayout;
-    QLabel *label;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
-    QPushButton *pushButton_4;
-    QPushButton *pushButton_5;
+    QLabel *mainWindow;
+    QPushButton *addFuit;
+    QPushButton *addDessert;
+    QPushButton *listFruits;
+    QPushButton *listDesserts;
+    QPushButton *exit;
     QMenuBar *menubar;
     QStatusBar *statusbar;
 
@@ -47,28 +47,28 @@ public:
         centralwidget->setObjectName("centralwidget");
         verticalLayout = new QVBoxLayout(centralwidget);
         verticalLayout->setObjectName("verticalLayout");
-        label = new QLabel(centralwidget);
-        label->setObjectName("label");
+        mainWindow = new QLabel(centralwidget);
+        mainWindow->setObjectName("mainWindow");
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
-        sizePolicy.setHeightForWidth(label->sizePolicy().hasHeightForWidth());
-        label->setSizePolicy(sizePolicy);
+        sizePolicy.setHeightForWidth(mainWindow->sizePolicy().hasHeightForWidth());
+        mainWindow->setSizePolicy(sizePolicy);
         QFont font;
         font.setFamilies({QString::fromUtf8("French Script MT")});
         font.setPointSize(72);
-        label->setFont(font);
-        label->setStyleSheet(QString::fromUtf8("QLabel {\n"
+        mainWindow->setFont(font);
+        mainWindow->setStyleSheet(QString::fromUtf8("QLabel {\n"
 "	color: #FFF\n"
 "}"));
-        label->setAlignment(Qt::AlignCenter);
+        mainWindow->setAlignment(Qt::AlignCenter);
 
-        verticalLayout->addWidget(label);
+        verticalLayout->addWidget(mainWindow);
 
-        pushButton = new QPushButton(centralwidget);
-        pushButton->setObjectName("pushButton");
-        pushButton->setMinimumSize(QSize(0, 40));
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        addFuit = new QPushButton(centralwidget);
+        addFuit->setObjectName("addFuit");
+        addFuit->setMinimumSize(QSize(0, 40));
+        addFuit->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -79,12 +79,12 @@ public:
 "	\n"
 "}"));
 
-        verticalLayout->addWidget(pushButton);
+        verticalLayout->addWidget(addFuit);
 
-        pushButton_2 = new QPushButton(centralwidget);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setMinimumSize(QSize(0, 40));
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        addDessert = new QPushButton(centralwidget);
+        addDessert->setObjectName("addDessert");
+        addDessert->setMinimumSize(QSize(0, 40));
+        addDessert->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -95,12 +95,12 @@ public:
 "	\n"
 "}"));
 
-        verticalLayout->addWidget(pushButton_2);
+        verticalLayout->addWidget(addDessert);
 
-        pushButton_3 = new QPushButton(centralwidget);
-        pushButton_3->setObjectName("pushButton_3");
-        pushButton_3->setMinimumSize(QSize(0, 40));
-        pushButton_3->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        listFruits = new QPushButton(centralwidget);
+        listFruits->setObjectName("listFruits");
+        listFruits->setMinimumSize(QSize(0, 40));
+        listFruits->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -111,12 +111,12 @@ public:
 "	\n"
 "}"));
 
-        verticalLayout->addWidget(pushButton_3);
+        verticalLayout->addWidget(listFruits);
 
-        pushButton_4 = new QPushButton(centralwidget);
-        pushButton_4->setObjectName("pushButton_4");
-        pushButton_4->setMinimumSize(QSize(0, 40));
-        pushButton_4->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        listDesserts = new QPushButton(centralwidget);
+        listDesserts->setObjectName("listDesserts");
+        listDesserts->setMinimumSize(QSize(0, 40));
+        listDesserts->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -127,12 +127,12 @@ public:
 "	\n"
 "}"));
 
-        verticalLayout->addWidget(pushButton_4);
+        verticalLayout->addWidget(listDesserts);
 
-        pushButton_5 = new QPushButton(centralwidget);
-        pushButton_5->setObjectName("pushButton_5");
-        pushButton_5->setMinimumSize(QSize(0, 40));
-        pushButton_5->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        exit = new QPushButton(centralwidget);
+        exit->setObjectName("exit");
+        exit->setMinimumSize(QSize(0, 40));
+        exit->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -143,7 +143,7 @@ public:
 "	\n"
 "}"));
 
-        verticalLayout->addWidget(pushButton_5);
+        verticalLayout->addWidget(exit);
 
         MainWindow->setCentralWidget(centralwidget);
         menubar = new QMenuBar(MainWindow);
@@ -162,12 +162,12 @@ public:
     void retranslateUi(QMainWindow *MainWindow)
     {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "MainWindow", nullptr));
-        label->setText(QCoreApplication::translate("MainWindow", "Restaurant", nullptr));
-        pushButton->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\264\320\260\321\202\320\270 \321\204\321\200\321\203\320\272\321\202", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\264\320\260\321\202\320\270 \320\264\320\265\321\201\320\265\321\200\321\202", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\262\320\265\321\201\321\202\320\270 \321\201\320\277\320\270\321\201\320\276\320\272 \321\204\321\200\321\203\320\272\321\202\321\226\320\262", nullptr));
-        pushButton_4->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\262\320\265\321\201\321\202\320\270 \321\201\320\277\320\270\321\201\320\276\320\272 \320\264\320\265\321\201\320\265\321\200\321\202\321\226\320\262", nullptr));
-        pushButton_5->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
+        mainWindow->setText(QCoreApplication::translate("MainWindow", "Restaurant", nullptr));
+        addFuit->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\264\320\260\321\202\320\270 \321\204\321\200\321\203\320\272\321\202", nullptr));
+        addDessert->setText(QCoreApplication::translate("MainWindow", "\320\224\320\276\320\264\320\260\321\202\320\270 \320\264\320\265\321\201\320\265\321\200\321\202", nullptr));
+        listFruits->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\262\320\265\321\201\321\202\320\270 \321\201\320\277\320\270\321\201\320\276\320\272 \321\204\321\200\321\203\320\272\321\202\321\226\320\262", nullptr));
+        listDesserts->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\320\262\320\265\321\201\321\202\320\270 \321\201\320\277\320\270\321\201\320\276\320\272 \320\264\320\265\321\201\320\265\321\200\321\202\321\226\320\262", nullptr));
+        exit->setText(QCoreApplication::translate("MainWindow", "\320\222\320\270\321\205\321\226\320\264", nullptr));
     } // retranslateUi
 
 };

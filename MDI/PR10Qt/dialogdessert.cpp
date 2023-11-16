@@ -17,24 +17,19 @@ DialogDessert::~DialogDessert()
     delete ui;
 }
 
-void DialogDessert::on_pushButton_clicked()
+void DialogDessert::on_create_clicked()
 {
-    this->hide();
-}
-
-void DialogDessert::on_pushButton_2_clicked()
-{
-    if (ui->lineEdit->text() != "" &&
-        ui->lineEdit_2->text() != "" &&
-        ui->lineEdit_3->text() != "" &&
-        ui->lineEdit_4->text() != "")
+    if (ui->typeLineEdit->text() != "" &&
+        ui->caloriesLineEdit->text() != "" &&
+        ui->sugarLineEdit->text() != "" &&
+        ui->ingridientsLineEdit->text() != "")
     {
         Dessert *dessert = new Dessert(
-            ui->lineEdit->text().toStdString(),
-            ui->lineEdit_2->text().toInt(),
-            ui->lineEdit_3->text().toInt(),
-            ui->lineEdit_4->text().toStdString()
-        );
+            ui->typeLineEdit->text().toStdString(),
+            ui->caloriesLineEdit->text().toInt(),
+            ui->sugarLineEdit->text().toInt(),
+            ui->ingridientsLineEdit->text().toStdString()
+            );
         emit created(dessert);
         this->hide();
     }
@@ -49,4 +44,10 @@ void DialogDessert::on_pushButton_2_clicked()
         qWarning() << "An error writing data to the object occured. You have not input all values";
         QMessageBox::critical(this, "Підозра на скам", "An error writing data to the object occured. You have not input all values");
     }
+}
+
+
+void DialogDessert::on_back_clicked()
+{
+    this->hide();
 }

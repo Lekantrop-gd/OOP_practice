@@ -6,19 +6,34 @@
 #include "dialogdessertlist.h"
 #include "QListWidget"
 #include "dbmanager.h"
+#include <custommessagehandler.h>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    qInstallMessageHandler(CustomMessageHandler::handleError);
+
     this->dialogFruitList = new DialogFruitList;
     this->dialogFruitList->setWindowTitle("Відображення фруктів");
     this->dialogDessertList = new DialogDessertList;
     this->dialogDessertList->setWindowTitle("Відображення десертів");
 
-    this->dbmanager = new DBmanager;
-    dbmanager->createTables();
+    try {
+        this->dbmanager = new DBmanager;
+    }
+    catch(...) {
+        qFatal("Access Violation Error");
+    }
+
+    try {
+        dbmanager->createTables();
+    }
+    catch (...) {
+        qWarning() << "Unable to create tables";
+    }
 
     this->dialogFruitList->updateList(this->dbmanager);
     this->dialogDessertList->updateList(this->dbmanager);
@@ -29,15 +44,33 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-
-void MainWindow::on_pushButton_5_clicked()
+void MainWindow::addFruit(Fruit *fruit)
 {
-    QApplication::exit();
-    dbmanager->closeDataBase();
+    try {
+        this->dbmanager->inserIntoTable(*fruit);
+    }
+    catch (...)
+    {
+        qWarning() << "Unable to add item to fruit table";
+    }
+
+    emit addedFruit(this->dbmanager);
 }
 
+void MainWindow::addDessert(Dessert *dessert)
+{
+    try {
+        this->dbmanager->inserIntoTable(*dessert);
+    }
+    catch (...)
+    {
+        qWarning() << "Unable to add item to dessert table";
+    }
 
-void MainWindow::on_pushButton_clicked()
+    emit addedDessert(this->dbmanager);
+}
+
+void MainWindow::on_addFuit_clicked()
 {
     DialogFruit dialogFruit;
     dialogFruit.setWindowTitle("Створення фрукта");
@@ -47,7 +80,7 @@ void MainWindow::on_pushButton_clicked()
     dialogFruit.exec();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_addDessert_clicked()
 {
     DialogDessert dialogDessert;
     dialogDessert.setWindowTitle("Створення десерта");
@@ -57,25 +90,25 @@ void MainWindow::on_pushButton_2_clicked()
     dialogDessert.exec();
 }
 
-
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_listFruits_clicked()
 {
     this->dialogFruitList->show();
 }
 
-void MainWindow::on_pushButton_4_clicked()
+void MainWindow::on_listDesserts_clicked()
 {
     this->dialogDessertList->show();
 }
 
-void MainWindow::addFruit(Fruit *fruit)
+void MainWindow::on_exit_clicked()
 {
-    this->dbmanager->inserIntoTable(*fruit);
-    emit addedFruit(this->dbmanager);
-}
+    try {
+        dbmanager->closeDataBase();
+    }
+    catch (...)
+    {
+        qWarning() << "Unable to close database";
+    }
 
-void MainWindow::addDessert(Dessert *dessert)
-{
-    this->dbmanager->inserIntoTable(*dessert);
-    emit addedDessert(this->dbmanager);
+    QApplication::exit();
 }

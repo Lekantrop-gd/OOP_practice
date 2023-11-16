@@ -23,16 +23,16 @@ class Ui_DialogDessert
 {
 public:
     QFormLayout *formLayout;
-    QLabel *label;
-    QLineEdit *lineEdit;
-    QLabel *label_2;
-    QLabel *label_3;
-    QLineEdit *lineEdit_2;
-    QLabel *label_4;
-    QLineEdit *lineEdit_3;
-    QLineEdit *lineEdit_4;
-    QPushButton *pushButton;
-    QPushButton *pushButton_2;
+    QLabel *typeLabel;
+    QLineEdit *typeLineEdit;
+    QLabel *caloriesLabel;
+    QLabel *sugarLabel;
+    QLineEdit *caloriesLineEdit;
+    QLabel *ingridientsLabel;
+    QLineEdit *sugarLineEdit;
+    QLineEdit *ingridientsLineEdit;
+    QPushButton *back;
+    QPushButton *create;
 
     void setupUi(QDialog *DialogDessert)
     {
@@ -44,78 +44,78 @@ public:
 "}"));
         formLayout = new QFormLayout(DialogDessert);
         formLayout->setObjectName("formLayout");
-        label = new QLabel(DialogDessert);
-        label->setObjectName("label");
+        typeLabel = new QLabel(DialogDessert);
+        typeLabel->setObjectName("typeLabel");
 
-        formLayout->setWidget(0, QFormLayout::LabelRole, label);
+        formLayout->setWidget(0, QFormLayout::LabelRole, typeLabel);
 
-        lineEdit = new QLineEdit(DialogDessert);
-        lineEdit->setObjectName("lineEdit");
-        lineEdit->setMinimumSize(QSize(120, 40));
-        lineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        typeLineEdit = new QLineEdit(DialogDessert);
+        typeLineEdit->setObjectName("typeLineEdit");
+        typeLineEdit->setMinimumSize(QSize(120, 40));
+        typeLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "	color: #FFF;\n"
 "	border: 1px solid rbg(255, 255, 255);	\n"
 "	border-radius: 20%;	\n"
 "	background-color: rgb(27, 27, 27);\n"
 "}"));
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, lineEdit);
+        formLayout->setWidget(0, QFormLayout::FieldRole, typeLineEdit);
 
-        label_2 = new QLabel(DialogDessert);
-        label_2->setObjectName("label_2");
+        caloriesLabel = new QLabel(DialogDessert);
+        caloriesLabel->setObjectName("caloriesLabel");
 
-        formLayout->setWidget(1, QFormLayout::LabelRole, label_2);
+        formLayout->setWidget(1, QFormLayout::LabelRole, caloriesLabel);
 
-        label_3 = new QLabel(DialogDessert);
-        label_3->setObjectName("label_3");
+        sugarLabel = new QLabel(DialogDessert);
+        sugarLabel->setObjectName("sugarLabel");
 
-        formLayout->setWidget(2, QFormLayout::LabelRole, label_3);
+        formLayout->setWidget(2, QFormLayout::LabelRole, sugarLabel);
 
-        lineEdit_2 = new QLineEdit(DialogDessert);
-        lineEdit_2->setObjectName("lineEdit_2");
-        lineEdit_2->setMinimumSize(QSize(120, 40));
-        lineEdit_2->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        caloriesLineEdit = new QLineEdit(DialogDessert);
+        caloriesLineEdit->setObjectName("caloriesLineEdit");
+        caloriesLineEdit->setMinimumSize(QSize(120, 40));
+        caloriesLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "	color: #FFF;\n"
 "	border: 1px solid rbg(255, 255, 255);	\n"
 "	border-radius: 20%;	\n"
 "	background-color: rgb(27, 27, 27);\n"
 "}"));
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, lineEdit_2);
+        formLayout->setWidget(1, QFormLayout::FieldRole, caloriesLineEdit);
 
-        label_4 = new QLabel(DialogDessert);
-        label_4->setObjectName("label_4");
+        ingridientsLabel = new QLabel(DialogDessert);
+        ingridientsLabel->setObjectName("ingridientsLabel");
 
-        formLayout->setWidget(3, QFormLayout::LabelRole, label_4);
+        formLayout->setWidget(3, QFormLayout::LabelRole, ingridientsLabel);
 
-        lineEdit_3 = new QLineEdit(DialogDessert);
-        lineEdit_3->setObjectName("lineEdit_3");
-        lineEdit_3->setMinimumSize(QSize(120, 40));
-        lineEdit_3->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        sugarLineEdit = new QLineEdit(DialogDessert);
+        sugarLineEdit->setObjectName("sugarLineEdit");
+        sugarLineEdit->setMinimumSize(QSize(120, 40));
+        sugarLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "	color: #FFF;\n"
 "	border: 1px solid rbg(255, 255, 255);	\n"
 "	border-radius: 20%;	\n"
 "	background-color: rgb(27, 27, 27);\n"
 "}"));
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, lineEdit_3);
+        formLayout->setWidget(2, QFormLayout::FieldRole, sugarLineEdit);
 
-        lineEdit_4 = new QLineEdit(DialogDessert);
-        lineEdit_4->setObjectName("lineEdit_4");
-        lineEdit_4->setMinimumSize(QSize(120, 40));
-        lineEdit_4->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
+        ingridientsLineEdit = new QLineEdit(DialogDessert);
+        ingridientsLineEdit->setObjectName("ingridientsLineEdit");
+        ingridientsLineEdit->setMinimumSize(QSize(120, 40));
+        ingridientsLineEdit->setStyleSheet(QString::fromUtf8("QLineEdit {\n"
 "	color: #FFF;\n"
 "	border: 1px solid rbg(255, 255, 255);	\n"
 "	border-radius: 20%;	\n"
 "	background-color: rgb(27, 27, 27);\n"
 "}"));
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, lineEdit_4);
+        formLayout->setWidget(3, QFormLayout::FieldRole, ingridientsLineEdit);
 
-        pushButton = new QPushButton(DialogDessert);
-        pushButton->setObjectName("pushButton");
-        pushButton->setMinimumSize(QSize(60, 40));
-        pushButton->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        back = new QPushButton(DialogDessert);
+        back->setObjectName("back");
+        back->setMinimumSize(QSize(60, 40));
+        back->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -126,12 +126,12 @@ public:
 "	\n"
 "}"));
 
-        formLayout->setWidget(4, QFormLayout::LabelRole, pushButton);
+        formLayout->setWidget(4, QFormLayout::LabelRole, back);
 
-        pushButton_2 = new QPushButton(DialogDessert);
-        pushButton_2->setObjectName("pushButton_2");
-        pushButton_2->setMinimumSize(QSize(120, 40));
-        pushButton_2->setStyleSheet(QString::fromUtf8("QPushButton {\n"
+        create = new QPushButton(DialogDessert);
+        create->setObjectName("create");
+        create->setMinimumSize(QSize(120, 40));
+        create->setStyleSheet(QString::fromUtf8("QPushButton {\n"
 "	border: 1px solid rbg(100, 100, 100);	\n"
 "	border-radius: 20%;	\n"
 "	color: #FFF;\n"
@@ -142,7 +142,7 @@ public:
 "	\n"
 "}"));
 
-        formLayout->setWidget(4, QFormLayout::FieldRole, pushButton_2);
+        formLayout->setWidget(4, QFormLayout::FieldRole, create);
 
 
         retranslateUi(DialogDessert);
@@ -153,12 +153,12 @@ public:
     void retranslateUi(QDialog *DialogDessert)
     {
         DialogDessert->setWindowTitle(QCoreApplication::translate("DialogDessert", "Dialog", nullptr));
-        label->setText(QCoreApplication::translate("DialogDessert", "\320\235\320\260\320\267\320\262\320\260 \320\264\320\265\321\201\320\265\321\200\321\202\321\203", nullptr));
-        label_2->setText(QCoreApplication::translate("DialogDessert", "\320\232\321\226\320\273\321\214\320\272\321\226\321\201\321\202\321\214 \320\272\320\260\320\273\320\276\321\200\321\226\320\271", nullptr));
-        label_3->setText(QCoreApplication::translate("DialogDessert", "\320\222\320\274\321\226\321\201\321\202 \321\206\321\203\320\272\321\200\321\203", nullptr));
-        label_4->setText(QCoreApplication::translate("DialogDessert", "\320\206\320\275\320\263\321\200\320\265\320\264\321\226\321\224\320\275\321\202\320\270", nullptr));
-        pushButton->setText(QCoreApplication::translate("DialogDessert", "\320\235\320\260\320\267\320\260\320\264", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("DialogDessert", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270", nullptr));
+        typeLabel->setText(QCoreApplication::translate("DialogDessert", "\320\235\320\260\320\267\320\262\320\260 \320\264\320\265\321\201\320\265\321\200\321\202\321\203", nullptr));
+        caloriesLabel->setText(QCoreApplication::translate("DialogDessert", "\320\232\321\226\320\273\321\214\320\272\321\226\321\201\321\202\321\214 \320\272\320\260\320\273\320\276\321\200\321\226\320\271", nullptr));
+        sugarLabel->setText(QCoreApplication::translate("DialogDessert", "\320\222\320\274\321\226\321\201\321\202 \321\206\321\203\320\272\321\200\321\203", nullptr));
+        ingridientsLabel->setText(QCoreApplication::translate("DialogDessert", "\320\206\320\275\320\263\321\200\320\265\320\264\321\226\321\224\320\275\321\202\320\270", nullptr));
+        back->setText(QCoreApplication::translate("DialogDessert", "\320\235\320\260\320\267\320\260\320\264", nullptr));
+        create->setText(QCoreApplication::translate("DialogDessert", "\320\241\321\202\320\262\320\276\321\200\320\270\321\202\320\270", nullptr));
     } // retranslateUi
 
 };

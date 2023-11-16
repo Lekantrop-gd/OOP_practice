@@ -1,0 +1,28 @@
+Warning: 
+
+
+2023-11-16 18:38:31: QSqlDatabase: 1QSQLITE driver not loaded (:0, )
+Warning: 
+
+
+2023-11-16 18:38:31: QSqlDatabase: available drivers: QSQLITE QMIMER QODBC QPSQL (:0, )
+Fatal: 
+
+
+2023-11-16 18:38:31: qe-85uhj78q945hq894u5h8uqyh8h459-u (..\PR10Qt\mainwindow.cpp:28, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-16 19:55:21: QSqlDatabase: 1QSQLITE driver not loaded (:0, )
+Warning: 
+
+
+2023-11-16 19:55:21: QSqlDatabase: available drivers: QSQLITE QMIMER QODBC QPSQL (:0, )
+Fatal: 
+
+
+2023-11-16 19:55:21: Access Violation Error (..\PR10Qt\mainwindow.cpp:28, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-16 20:01:38: Unable to create tables (..\PR10Qt\mainwindow.cpp:35, MainWindow::MainWindow(QWidget*))

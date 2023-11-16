@@ -4,24 +4,15 @@
 #include <QDebug>
 #include <QFile>
 #include <QDateTime>
+#include <custommessagehandler.h>
 
-void logError(QString errorText) {
-    QFile file("log.txt");
-    if (file.open(QIODevice::Append)) {
-        QTextStream stream(&file);
-        stream << "\n\n\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + ": " + errorText;
-    }
-    file.close();
-}
 
 DBmanager::DBmanager()
 {
     this->db = QSqlDatabase::addDatabase("QSQLITE");
     this->db.setDatabaseName("DataBase.db");
-
     if (!this->connectToDataBase()) {
-        logError("Unable to open database. Error description: " + db.lastError().text());
-        qFatal() << "Unable to open database. Error description: " + db.lastError().text();
+        throw "Access Violation Exception";
     }
 }
 
@@ -36,9 +27,9 @@ bool DBmanager::connectToDataBase()
 void DBmanager::closeDataBase()
 {
     this->db.close();
+
     if (this->db.lastError().text() != "") {
-        logError("Unable to close database. Error description: " + this->db.lastError().text());
-        qWarning() << "Unable to close database. Error description: " + this->db.lastError().text();
+        throw "Unable to close database";
     }
 }
 
@@ -47,37 +38,32 @@ QSqlDatabase DBmanager::getDB()
     return this->db;
 }
 
-bool DBmanager::createTables()
+void DBmanager::createTables()
 {
     QSqlQuery query;
+
     if(!query.exec( "CREATE TABLE " + this->FRUITS_TABLE_NAME + " ("
                     "type TEXT NOT NULL, "
                     "calories INT NOT NULL,"
                     "vitamins VARCHAR(255) NOT NULL, "
                     "taste VARCHAR(255) NOT NULL"
-                    " )"
-                    ))
+                    " )"))
     {
-        logError("Unable to create table: " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text());
-        qWarning() << "Unable to create table: " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text();
-        return false;
+        throw "Unable to create table: " + this->FRUITS_TABLE_NAME;
     }
+
     if (!query.exec("CREATE TABLE " + this->DESSERTS_TABLE_NAME + " ("
                     "type TEXT NOT NULL,"
                     "calories INT NOT NULL,"
                     "sugarContent INT NOT NULL, "
                     "ingridients VARCHAR(255) NOT NULL"
-                    " )"
-                          ))
+                    " )"))
     {
-        logError("Unable to create table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text());
-        qWarning() << "Unable to create table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text();
-        return false;
+        throw "Unable to create table " + this->DESSERTS_TABLE_NAME;
     }
-    return true;
 }
 
-bool DBmanager::inserIntoTable(const Fruit &fruit)
+void DBmanager::inserIntoTable(const Fruit &fruit)
 {
     QSqlQuery query;
 
@@ -89,14 +75,11 @@ bool DBmanager::inserIntoTable(const Fruit &fruit)
 
     if (!query.exec())
     {
-        logError("Unable to insert into table " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text());
-        qWarning() << "Unable to insert into table " + this->FRUITS_TABLE_NAME + ". Error description: " + query.lastError().text();
-        return false;
+        throw "Unable to insert into table " + this->FRUITS_TABLE_NAME;
     }
-    else return true;
 }
 
-bool DBmanager::inserIntoTable(const Dessert &dessert)
+void DBmanager::inserIntoTable(const Dessert &dessert)
 {
     QSqlQuery query;
 
@@ -108,9 +91,6 @@ bool DBmanager::inserIntoTable(const Dessert &dessert)
 
     if (!query.exec())
     {
-        logError("Unable to insert into table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text());
-        qWarning() << "Unable to insert into table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text();
-        return false;
+        throw "Unable to insert into table " + this->DESSERTS_TABLE_NAME + ". Error description: " + query.lastError().text();
     }
-    else return true;
 }

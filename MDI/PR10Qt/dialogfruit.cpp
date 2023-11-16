@@ -17,23 +17,18 @@ DialogFruit::~DialogFruit()
     delete ui;
 }
 
-void DialogFruit::on_pushButton_clicked()
+void DialogFruit::on_create_clicked()
 {
-    this->hide();
-}
-
-void DialogFruit::on_pushButton_2_clicked()
-{
-    if (ui->lineEdit->text() != "" &&
-        ui->lineEdit_2->text() != "" &&
-        ui->lineEdit_3->text() != "" &&
-        ui->lineEdit_4->text() != "")
+    if (ui->typeLineEdit->text() != "" &&
+        ui->caloriesLineEdit->text() != "" &&
+        ui->vitaminsLineEdit->text() != "" &&
+        ui->tasteLineEdit->text() != "")
     {
         Fruit *fruit = new Fruit(
-            ui->lineEdit->text().toStdString(),
-            ui->lineEdit_2->text().toInt(),
-            ui->lineEdit_3->text().toStdString(),
-            ui->lineEdit_4->text().toStdString()
+            ui->typeLineEdit->text().toStdString(),
+            ui->caloriesLineEdit->text().toInt(),
+            ui->vitaminsLineEdit->text().toStdString(),
+            ui->tasteLineEdit->text().toStdString()
             );
         emit created(fruit);
         this->hide();
@@ -50,3 +45,10 @@ void DialogFruit::on_pushButton_2_clicked()
         QMessageBox::critical(this, "Підозра на скам", "An error writing data to the object occured. You have not input all values");
     }
 }
+
+
+void DialogFruit::on_back_clicked()
+{
+    this->hide();
+}
+

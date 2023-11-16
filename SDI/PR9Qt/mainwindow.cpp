@@ -163,6 +163,6 @@ void MainWindow::on_pushButton_2_clicked()
         ui->DoorsLabel->setText("Кількість дверей: " + QString::number(this->car->getNumberOfDoors()));
         ui->pushButton_5->show();
     } else {
-        QMessageBox::critical(this, "Підозра на скам", "Ви ввели не всі значення!");
+        QMessageBox::critical(this, "Підозра на скам", "Немає створених об'єктів!");
     }
 }
