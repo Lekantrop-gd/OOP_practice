@@ -19,12 +19,61 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_pushButton_5_clicked()
+{
+    setActiveRightPanel(false);
+}
+
+
+void MainWindow::on_pushButton_4_clicked()
+{
+    QString id = ui->IdLine->text();
+    QString model = ui->ModelLine->text();
+    QString year = ui->YearLine->text();
+    QString price = ui->PriceLine->text();
+    QString rNumber = ui->RegistrationNumberLine->text();
+    QString vin = ui->VinLine->text();
+    QString seats = ui->SeatsLine->text();
+    QString doors = ui->DoorsLine->text();
+    if (ui->IdLine->text() != "" &&
+        ui->ModelLine->text() != "" &&
+        ui->YearLine->text() != "" &&
+        ui->PriceLine->text() != "" &&
+        ui->RegistrationNumberLine->text() != "" &&
+        ui->VinLine->text() != "" &&
+        ui->SeatsLine->text() != "" &&
+        ui->DoorsLine->text() != "") {
+
+        this->car = new Car(id.toInt(), model.toStdString(), year.toInt(), price.toInt(), rNumber.toStdString(), vin.toStdString(), seats.toInt(), doors.toInt());
+    }
+    else {
+        QMessageBox::critical(this, "Підозра на скам", "Ви ввели не всі значення!");
+    }
+    setActiveRightPanel(false);
+}
 
 void MainWindow::on_pushButton_3_clicked()
 {
     QCoreApplication::quit();
 }
 
+void MainWindow::on_pushButton_2_clicked()
+{
+    if (this->car) {
+        setActiveRightPanel(false);
+        QString id = "ID: " + QString::number(this->car->getId());
+        QString model = "Модель: " + QString::fromStdString(this->car->getModel());
+        QString year = "Рік випуску: " + QString::number(this->car->getReleaseDate());
+        QString price = "Ціна: " + QString::number(this->car->getPrice());
+        QString registrationNumber = "Реєстраційний номер: " + QString::fromStdString(this->car->getRegistrationNumber());
+        QString vinCode = "Він-код: " + QString::fromStdString(this->car->getVinCode());
+        QString numberOfSeats = "Кількість сидінь: " + QString::number(this->car->getNumberOfSeats());
+        QString numberOfDoors = "Кількість дверей: " + QString::number(this->car->getNumberOfDoors());
+        QMessageBox::information(this, "Відображення автівки", id + "\n" + model + "\n" + year + "\n" + price + "\n" + registrationNumber + "\n" + vinCode + "\n" + numberOfSeats + "\n" + numberOfDoors);
+    } else {
+        QMessageBox::critical(this, "Підозра на скам", "Немає створених об'єктів!");
+    }
+}
 
 void MainWindow::on_pushButton_clicked()
 {
@@ -110,59 +159,5 @@ void MainWindow::setActiveRightPanel(bool activeStatus)
         this->isRightPanelActive = false;
         ui->horizontalSpacer->changeSize(ui->horizontalSpacer->geometry().width(), ui->horizontalSpacer->geometry().height(), QSizePolicy::Ignored);
         ui->horizontalSpacer_2->changeSize(ui->horizontalSpacer->geometry().width(), ui->horizontalSpacer->geometry().height(), QSizePolicy::Ignored);
-    }
-}
-
-
-void MainWindow::on_pushButton_5_clicked()
-{
-    setActiveRightPanel(false);
-}
-
-
-void MainWindow::on_pushButton_4_clicked()
-{
-    QString id = ui->IdLine->text();
-    QString model = ui->ModelLine->text();
-    QString year = ui->YearLine->text();
-    QString price = ui->PriceLine->text();
-    QString rNumber = ui->RegistrationNumberLine->text();
-    QString vin = ui->VinLine->text();
-    QString seats = ui->SeatsLine->text();
-    QString doors = ui->DoorsLine->text();
-    if (ui->IdLine->text() != "" &&
-        ui->ModelLine->text() != "" &&
-        ui->YearLine->text() != "" &&
-        ui->PriceLine->text() != "" &&
-        ui->RegistrationNumberLine->text() != "" &&
-        ui->VinLine->text() != "" &&
-        ui->SeatsLine->text() != "" &&
-        ui->DoorsLine->text() != "") {
-
-        this->car = new Car(id.toInt(), model.toStdString(), year.toInt(), price.toInt(), rNumber.toStdString(), vin.toStdString(), seats.toInt(), doors.toInt());
-    }
-    else {
-        QMessageBox::critical(this, "Підозра на скам", "Ви ввели не всі значення!");
-    }
-    setActiveRightPanel(false);
-}
-
-
-void MainWindow::on_pushButton_2_clicked()
-{
-    if (this->car) {
-        setActiveRightPanel(false);
-        setActiveLabels(true);
-        ui->IdLabel->setText("ID: " + QString::number(this->car->getId()));
-        ui->ModelLabel->setText("Модель: " + QString::fromStdString(this->car->getModel()));
-        ui->YearLabel->setText("Рік випуску: " + QString::number(this->car->getReleaseDate()));
-        ui->PriceLabel->setText("Ціна: " + QString::number(this->car->getPrice()));
-        ui->RegistrationNumberLabel->setText("Реєстраційний номер: " + QString::fromStdString(this->car->getRegistrationNumber()));
-        ui->VinLabel->setText("Він-код: " + QString::fromStdString(this->car->getVinCode()));
-        ui->SeatsLabel->setText("Кількість сидінь: " + QString::number(this->car->getNumberOfSeats()));
-        ui->DoorsLabel->setText("Кількість дверей: " + QString::number(this->car->getNumberOfDoors()));
-        ui->pushButton_5->show();
-    } else {
-        QMessageBox::critical(this, "Підозра на скам", "Немає створених об'єктів!");
     }
 }

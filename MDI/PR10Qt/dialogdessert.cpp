@@ -34,18 +34,10 @@ void DialogDessert::on_create_clicked()
         this->hide();
     }
     else {
-        QFile file("log.txt");
-        if (file.open(QIODevice::Append)) {
-            QTextStream stream(&file);
-            stream << "\n\n\n" + QDateTime::currentDateTime().toString("yyyy-MM-dd hh:mm:ss") + ": " + "An error writing data to the object occured. You have not input all values";
-        }
-        file.close();
-
-        qWarning() << "An error writing data to the object occured. You have not input all values";
-        QMessageBox::critical(this, "Підозра на скам", "An error writing data to the object occured. You have not input all values");
+        QMessageBox::warning(this, "Error", "You didn't fill all the fields!");
+        qWarning() << "Unable to create dessert object. You didn't fill all the fields";
     }
 }
-
 
 void DialogDessert::on_back_clicked()
 {

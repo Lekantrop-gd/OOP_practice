@@ -26,3 +26,43 @@ Warning:
 
 
 2023-11-16 20:01:38: Unable to create tables (..\PR10Qt\mainwindow.cpp:35, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-17 09:38:28: Unable to create tables (..\PR10Qt\mainwindow.cpp:35, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-17 09:40:49: Unable to create tables (..\PR10Qt\mainwindow.cpp:35, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-17 09:40:51: Unable to create fruit object. You didn't fill all the fields (..\PR10Qt\dialogfruit.cpp:37, void DialogFruit::on_create_clicked())
+Warning: 
+
+
+2023-11-17 09:40:52: Unable to create fruit object. You didn't fill all the fields (..\PR10Qt\dialogfruit.cpp:37, void DialogFruit::on_create_clicked())
+Warning: 
+
+
+2023-11-17 09:40:53: Unable to create fruit object. You didn't fill all the fields (..\PR10Qt\dialogfruit.cpp:37, void DialogFruit::on_create_clicked())
+Warning: 
+
+
+2023-11-17 09:40:53: Unable to create fruit object. You didn't fill all the fields (..\PR10Qt\dialogfruit.cpp:37, void DialogFruit::on_create_clicked())
+Warning: 
+
+
+2023-11-17 09:42:08: Unable to create tables (..\PR10Qt\mainwindow.cpp:35, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-17 09:42:13: Unable to create fruit object. You didn't fill all the fields (..\PR10Qt\dialogfruit.cpp:38, void DialogFruit::on_create_clicked())
+Warning: 
+
+
+2023-11-17 09:42:57: Unable to create tables (..\PR10Qt\mainwindow.cpp:35, MainWindow::MainWindow(QWidget*))
+Warning: 
+
+
+2023-11-17 09:43:00: Unable to create dessert object. You didn't fill all the fields (..\PR10Qt\dialogdessert.cpp:38, void DialogDessert::on_create_clicked())
